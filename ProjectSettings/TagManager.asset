@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GemUI
+  - HeartUI
+  - Stats
+  - LeverUI
+  - Fader
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Ground
+  - Ignore
+  - PlayerStats
+  - EnemyAttack
+  - Enemy
+  - Room
+  - Object
+  - PlayerAttack
+  - Ladders
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1938821885
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 1402613241
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2815040009
+    locked: 0
+  - name: Object
+    uniqueID: 3634408203
+    locked: 0
+  - name: Enemy
+    uniqueID: 1528813235
+    locked: 0
+  - name: Player
+    uniqueID: 3362872977
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1709155485
+    locked: 0
