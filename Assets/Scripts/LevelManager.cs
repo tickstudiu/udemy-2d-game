@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     public CanvasGroup loadingCanvas;
     public Slider prograssBar;
 
-    private PlayerCollectible pC;
+    [HideInInspector] public PlayerCollectible pC;
     private int lvlToload;
 
     private void Awake()
@@ -45,8 +45,8 @@ public class LevelManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Fader").GetComponent<Animator>().SetTrigger("FadeOut");
 
-        GameManager.totalUnlockLever = 0;
-        Instance.pC.SaveGem();
+        GameManager.totalUnlockLever = 0;  
+        GameManager.Instance.levers.Clear();
 
         lvlToload = index;
 

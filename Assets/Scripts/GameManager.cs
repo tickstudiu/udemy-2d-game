@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private DeathMenu deathMenu;
     private Door theDoor;
 
-    private List<Lever> levers;
+    [HideInInspector] public List<Lever> levers;
     private static int totalLever;
     public static int totalUnlockLever = 0;
     private static Text leverComponent;
@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
         }
 
         levers = new List<Lever>();
-        leverComponent = GameObject.FindGameObjectWithTag("LeverUI").GetComponentInChildren<Text>();
     }
 
     public static void RegisterDeathMenu(DeathMenu dM)
@@ -46,6 +45,7 @@ public class GameManager : MonoBehaviour
             Instance.levers.Add(lever);
 
             totalLever = Instance.levers.Count;
+            leverComponent = GameObject.FindGameObjectWithTag("LeverUI").GetComponentInChildren<Text>();
             leverComponent.text = totalUnlockLever + "/" + totalLever.ToString();
         }
     }
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         Instance.levers.Remove(lever);
 
         totalUnlockLever++;
+        leverComponent = GameObject.FindGameObjectWithTag("LeverUI").GetComponentInChildren<Text>();
         leverComponent.text = totalUnlockLever + "/" + totalLever.ToString();
 
         if (Instance.levers.Count == 0) Instance.theDoor.UnlockDoor();

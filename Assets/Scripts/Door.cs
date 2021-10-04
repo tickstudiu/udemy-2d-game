@@ -25,6 +25,7 @@ public class Door : MonoBehaviour
             collision.GetComponent<GatherInput>().DisableControls();
 
             LevelManager.Instance.ManagerLoadLevel(lvlToload);
+            LevelManager.Instance.pC.SaveGem();
         }
     }
 
