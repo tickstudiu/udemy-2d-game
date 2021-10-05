@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     private Animator anim;
+    public GameObject icon;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Lever : MonoBehaviour
 
             anim.SetTrigger("Unlock");
 
+            icon.SetActive(false);
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<AudioSource>().Play();
         }
